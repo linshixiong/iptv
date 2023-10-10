@@ -17,6 +17,7 @@ if __name__ == "__main__":
                 name = item["channelName"]
                 url = item["channelURL"][0]
                 group_name = "未分组"
+                short_name = name.replace("高清1","").replace("标清1","").replace("标清","").replace("高清","")
                 if("CCTV" in name or "央视" in name):
                     group_name = "央视"
                 if("卫视" in name):
@@ -32,5 +33,5 @@ if __name__ == "__main__":
                 print("正在生成频道: {}".format(name))
 
                 file.write(
-                    "#EXTINF:-1 tvg-id=\"{}\" tvg-name=\"{}\"  group-title=\"{}\",{}\n".format(name, name, group_name, name))
+                    "#EXTINF:-1 tvg-id=\"{}\" tvg-name=\"{}\" tvg-logo=\"https://live.fanmingming.com/tv/{}.png\" group-title=\"{}\",{}\n".format(name, name, short_name, group_name, name))
                 file.write("{}\n".format(url))
