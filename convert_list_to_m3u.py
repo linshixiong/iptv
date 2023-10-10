@@ -37,5 +37,5 @@ if __name__ == "__main__":
                 print("正在生成频道: {}".format(name))
 
                 file.write(
-                    "#EXTINF:-1 tvg-id=\"{}\" tvg-name=\"{}\" tvg-logo=\"https://live.fanmingming.com/tv/{}.png\" group-title=\"{}\",{}\n".format(name, name, short_name, group_name, name))
+                    "#EXTINF:-1 tvg-id=\"{}\" tvg-name=\"{}\" tvg-logo=\"https://live.fanmingming.com/tv/{}.png\" group-title=\"{}\",{}\n".format(short_name, short_name, short_name, group_name, name))
                 file.write("{}\n".format(url))
