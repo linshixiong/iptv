@@ -16,11 +16,17 @@ if __name__ == "__main__":
                 id = item["channelID"]
                 name = item["channelName"]
                 url = item["channelURL"][0]
-                group_name = ""
+                group_name = "未分组"
                 if("CCTV" in name):
                     group_name = "央视"
                 if("卫视" in name):
                     group_name = "卫视"
+                if("广东" in name or "深圳" in name):
+                    group_name = "广东"
+                    
+                if("高清" in name):
+                    group_name += "|高清"    
+            
                 print("正在生成频道: {}".format(name))
 
                 file.write(
