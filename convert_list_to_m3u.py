@@ -25,7 +25,7 @@ if __name__ == "__main__":
                     group_name = "广东"
                     
                 if("高清" in name):
-                    group_name += "|高清"    
+                    group_name += ";高清"    
             
                 print("正在生成频道: {}".format(name))
 
