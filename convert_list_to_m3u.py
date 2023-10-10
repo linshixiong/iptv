@@ -17,10 +17,12 @@ if __name__ == "__main__":
                 name = item["channelName"]
                 url = item["channelURL"][0]
                 group_name = "未分组"
-                if("CCTV" in name):
+                if("CCTV" in name or "央视" in name):
                     group_name = "央视"
                 if("卫视" in name):
                     group_name = "卫视"
+                if("CETV" in name):
+                    group_name = "CETV"
                 if("广东" in name or "深圳" in name):
                     group_name = "广东"
                     
